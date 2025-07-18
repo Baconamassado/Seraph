@@ -1,6 +1,3 @@
--- By x7bokab
--- This was made to be used in Seraph
-
 local SimpleRemoteSpy = {}
 
 local hooked = false
@@ -17,13 +14,22 @@ function SimpleRemoteSpy.Start(onEventFired)
 
     mt.__namecall = newcclosure(function(self, ...)
         local method = getnamecallmethod()
+        local success, ret = pcall(oldNamecall, self, ...)
+
         if method == "FireServer" or method == "InvokeServer" then
-            local args = { ... }
-            pcall(function()
-                onEventFired(self, method, args)
+            local args = {...}
+            task.spawn(function()
+                pcall(function()
+                    onEventFired(self, method, args)
+                end)
             end)
         end
-        return oldNamecall(self, ...)
+
+        if success then
+            return ret
+        else
+            error(ret)
+        end
     end)
 
     setreadonly(mt, true)
