@@ -1,0 +1,24 @@
+{
+  "Characters": {
+    "Two time": {
+      "Skills": {
+        "Dagger": 30
+      }
+    },
+    "Shedletsky": {
+      "Skills": {
+        "Slash": 40
+      }
+    },
+    "Guest 1337": {
+        "Skills": {
+            "Block": 24
+        }
+    },
+    "Chance": {
+        "Skills": {
+            "Idk bro i dont have chance lol": 99999999999
+        }
+    }
+  }
+}
