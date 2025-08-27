@@ -18,20 +18,20 @@ local function test(name, aliases, callback, target)
 
 	task.spawn(function()
 		if not callback then
-			print("⏺️ " .. name)
+			-- print("⏺️ " .. name)
 		elseif not getGlobal(name) then
 			fails = fails + 1
-			warn("⛔ " .. name)
+			-- warn("⛔ " .. name)
 		else
 			local success, message = pcall(callback)
 	        name = tostring(name)
 			message = tostring(message)
 			if success then
 				passes = passes + 1
-				print("✅ " .. tostring(name) .. (tostring(message) and " • " .. tostring(message) or ""))
+				-- print("✅ " .. tostring(name) .. (tostring(message) and " • " .. tostring(message) or ""))
 			else
 				fails = fails + 1
-				warn("⛔ " .. name .. " failed: " .. message)
+				-- warn("⛔ " .. name .. " failed: " .. message)
 			end
 		end
 	
@@ -45,7 +45,7 @@ local function test(name, aliases, callback, target)
 	
 		if #undefinedAliases > 0 then
 			undefined = undefined + 1
-			warn("⚠️ " .. table.concat(undefinedAliases, ", "))
+			-- warn("⚠️ " .. table.concat(undefinedAliases, ", "))
 		end
 
 		running = running - 1
@@ -56,8 +56,8 @@ end
 
 print("\n")
 
-print("UNC Environment Check")
-print("✅ - Pass, ⛔ - Fail, ⏺️ - No test, ⚠️ - Missing aliases\n")
+-- print("UNC Environment Check")
+-- print("✅ - Pass, ⛔ - Fail, ⏺️ - No test, ⚠️ - Missing aliases\n")
 
 task.defer(function()
 	repeat task.wait() until running == 0
@@ -65,12 +65,12 @@ task.defer(function()
 	local rate = math.round(passes / (passes + fails) * 100)
 	local outOf = passes .. " out of " .. (passes + fails)
 
-	print("\n")
+	-- print("\n")
 
-	print("UNC Summary")
-	print("✅ Tested with a " .. rate .. "% success rate (" .. outOf .. ")")
-	print("⛔ " .. fails .. " tests failed")
-	print("⚠️ " .. undefined .. " globals are missing aliases")
+	-- print("UNC Summary")
+	-- print("✅ Tested with a " .. rate .. "% success rate (" .. outOf .. ")")
+	-- print("⛔ " .. fails .. " tests failed")
+	-- print("⚠️ " .. undefined .. " globals are missing aliases")
 	getgenv().SeraphNotSkiddedXDUncTest = rate
 end)
 
