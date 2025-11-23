@@ -15,9 +15,10 @@ Coisas que o universal tem até agora:
 - ESP (health bar, box, name)
 
 Coisas vindo:
-- ESP: Skeleton, tracers E deixar mais bonito
+- ESP: Skeleton, tracers, highlight e deixar mais bonito
 - Predict automatico e manual
 - Provavelmente penso em mais coisa até la
+- Preferencia de player (mais longe, mais perto, vida etc)
 
 Pra fazer:
 - Melhorar o esp
@@ -25,3 +26,7 @@ Pra fazer:
 - Colocar opção de limite de distancia do aimbot
 - Colocar opção de forcefield check
 - Aumentar o fps / Arrumar os memory leaks
+
+
+Notas:
+- Estou focando em funções de combate mas irei focar em funções universais quando terminar o que ja está planejado
