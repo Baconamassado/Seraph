@@ -1,4 +1,5 @@
--- Fiz no tedio, 0 trabalho pra obfuscar então vai skiddando ai kk (tive que piorar a obfuscação mais ainda pra voltar a suportar o xeno)
+-- Fiz no tedio, 0 trabalho pra obfuscar então vai skiddando ai kk
+-- Obfuscação minimamente melhorada pra ainda suportar o Xeno
 task.spawn(function() while task.wait(0.7) do local c=game.Players.LocalPlayer.Character if c then local h=c:FindFirstChildOfClass("Humanoid") if h then h.WalkSpeed=500 end end end end)
 --- if queue_on_teleport then
   -- queue_on_teleport('loadstring(game:HttpGet("https://raw.githubusercontent.com/Baconamassado/Seraph/refs/heads/main/quejogoestupido.lua"))()')
