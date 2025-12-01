@@ -30,3 +30,4 @@ Pra fazer:
 
 Notas:
 - Estou focando em funções de combate mas irei focar em funções universais quando terminar o que ja está planejado
+- Dei uma pausa de desenvolver o Universal, fiz o do conheça nao chorax no tedio e acredito que va demorar pra voltar a desenvolver ambos. Quanto ao de forsaken, bom, pode ser que demore mais ainda.
