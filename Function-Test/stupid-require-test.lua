@@ -1,12 +1,13 @@
--- shit require test
-local success, result = pcall(function()
-    local femboyModule = Instance.new("ModuleScript")
-    femboyModule.Source = "return 123"
-    return require(femboyModule) == 123
-end)
+local function t()
+    local m = Instance.new("ModuleScript")
+    m.Name = "__require_test"
+    m.Source = 'return "femboy > tomboy"'
 
-if success and result then
-    return true
-else
-    return false
+    local ok, v = pcall(require, module)
+
+    m:Destroy()
+
+    return ok and v == "femboy > tomboy"
 end
+
+return t()
