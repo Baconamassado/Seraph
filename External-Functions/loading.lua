@@ -107,6 +107,12 @@ local function waitforloading()
 end
 spawn(function()
     appear()
+    if not isfolder("Seraph") then
+	    makefolder("Seraph")
+    end
+    if not isfolder("Seraph/Assets") then
+        makefolder("Seraph/Assets")
+    end
     local wtd = "Seraph/Assets/seraphLogo.png"
     if not isfile(wtd) then
         print('Downloading logo')
