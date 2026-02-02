@@ -1,4 +1,4 @@
--- Segunda versão de teste
+-- Provavelmente vai ser subistituido pelo loading (que vai dar um proposito pra ele em vez de só demorar mais pra carregar)
 
 
 local function baixarIm(url, f, customPath)
