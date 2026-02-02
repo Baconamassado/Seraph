@@ -107,6 +107,12 @@ local function waitforloading()
 end
 spawn(function()
     appear()
+    local wtd = "Seraph/Assets/seraphLogo.png"
+    if not isfile(wtd) then
+        print('Downloading logo')
+        writefile(wtd, game:HttpGet("https://raw.githubusercontent.com/Baconamassado/Seraph/main/Assets/SeraphLogo.png"))
+        print('Logo downloaded')
+    end
     task.wait(0.3)
     local factor = 0.12
     local currentValue = 0
