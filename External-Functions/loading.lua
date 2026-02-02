@@ -18,14 +18,8 @@ m.Size = UDim2.new(0, 360, 0, 78)
 m.BackgroundColor3 = NEON_BLACK
 m.BackgroundTransparency = 1
 m.BorderSizePixel = 0
-local mC = Instance.new("UICorner")
-mC.Parent = m
-mC.CornerRadius = UDim.new(0, 14)
-local mS = Instance.new("UIStroke")
-mS.Parent = m
-mS.Color = ACCENT
-mS.Transparency = 0.6
-mS.Thickness = 1
+local mC = Instance.new("UICorner"); mC.Parent = m; mC.CornerRadius = UDim.new(0, 14)
+local mS = Instance.new("UIStroke"); mS.Parent = m; mS.Color = ACCENT; mS.Transparency = 0.6; mS.Thickness = 1
 local ttl = Instance.new("TextLabel")
 ttl.Name = "Title"
 ttl.Parent = m
@@ -61,14 +55,8 @@ bg.Size = UDim2.new(1, -28, 0, 16)
 bg.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
 bg.BackgroundTransparency = 0.05
 bg.BorderSizePixel = 0
-local bgC = Instance.new("UICorner")
-bgC.Parent = bg
-bgC.CornerRadius = UDim.new(0, 8)
-local bgS = Instance.new("UIStroke")
-bgS.Parent = bg
-bgS.Color = ACCENT
-bgS.Transparency = 0.75
-bgS.Thickness = 1
+local bgC = Instance.new("UICorner"); bgC.Parent = bg; bgC.CornerRadius = UDim.new(0, 8)
+local bgS = Instance.new("UIStroke"); bgS.Parent = bg; bgS.Color = ACCENT; bgS.Transparency = 0.75; bgS.Thickness = 1
 local bar = Instance.new("Frame")
 bar.Name = "Bar"
 bar.Parent = bg
@@ -77,21 +65,14 @@ bar.Position = UDim2.new(0, 0, 0, 0)
 bar.Size = UDim2.new(0, 0, 1, 0)
 bar.BackgroundColor3 = NEON_WHITE
 bar.BorderSizePixel = 0
-local barC = Instance.new("UICorner")
-barC.Parent = bar
-barC.CornerRadius = UDim.new(0, 8)
-local barG = Instance.new("UIGradient")
-barG.Parent = bar
+local barC = Instance.new("UICorner"); barC.Parent = bar; barC.CornerRadius = UDim.new(0, 8)
+local barG = Instance.new("UIGradient"); barG.Parent = bar
 barG.Color = ColorSequence.new{
     ColorSequenceKeypoint.new(0.0, NEON_BLACK),
     ColorSequenceKeypoint.new(1.0, NEON_WHITE),
 }
 barG.Rotation = 0
-local barS = Instance.new("UIStroke")
-barS.Parent = bar
-barS.Color = ACCENT
-barS.Transparency = 0.4
-barS.Thickness = 1.5
+local barS = Instance.new("UIStroke"); barS.Parent = bar; barS.Color = ACCENT; barS.Transparency = 0.4; barS.Thickness = 1.5
 local appearTI = TweenInfo.new(0.5, Enum.EasingStyle.Quart, Enum.EasingDirection.Out)
 local progressTI = TweenInfo.new(0.45, Enum.EasingStyle.Sine, Enum.EasingDirection.Out)
 local disappearTI = TweenInfo.new(0.35, Enum.EasingStyle.Quad, Enum.EasingDirection.In)
@@ -121,7 +102,6 @@ local function setProgress(p, duration)
 end
 local function waitforloading()
     while not loaded do
-        if loaded then break end
         task.wait()
     end
 end
@@ -140,3 +120,10 @@ spawn(function()
     task.wait(0.5)
     hideAndDestroy()
 end)
+return {
+    waitforloading = waitforloading,
+    SetProgress = setProgress,
+    Show = appear,
+    Hide = hideAndDestroy,
+    Gui = sg
+}
