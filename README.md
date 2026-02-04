@@ -1,33 +1,18 @@
-Enquanto eu não tiver um executor melhor que o xeno, sem updates para o de Forsaken, mas estou trabalhando no universal
+Dei uma pausa do universal, pois terei que fazer um rewrite completo devido a probleemas de otimização.
 
-As long as I don't have a better executor than Xeno, no updates for the Forsaken one, but I am working on the universal one
+No momento, estou desenvolvendo um script de control (jogo bem tuff: https://www.roblox.com/games/71590966974143/CONTROL)
 
-Coisas que o universal tem até agora:
-- Spinbot
-- Aimbot (ainda to melhorando o fov, tem wallcheck, team check etc)
-- Expand hitbox
-- Anti headshot (ainda to arrumando)
-- HvH (Hacker vs Hacker, em desenvolvimento)
-- Jump speed e speed (basico)
-- Desync (bem instavel mas melhorando)
-- Umas função basica de arsenal (reciclada do infinix)
-- Triggerbot
-- ESP (health bar, box, name)
+Funções que tem até agora:
 
-Coisas vindo:
-- ESP: Skeleton, tracers, highlight e deixar mais bonito
-- Predict automatico e manual
-- Provavelmente penso em mais coisa até la
-- Preferencia de player (mais longe, mais perto, vida etc)
+- Auto tp to office (condições que podem ser selecionadas pra acontecer: Sanity, Health, Monster/Entity)
+- Tp to office (mesma coisa só que manual)
+- Items esp
+- Monsters esp
+- Auto prayers
+- Get all money
+- Fullbright
+- No fog
+- Delete office shadows
+- Auto get computer code
 
-Pra fazer:
-- Melhorar o esp
-- Arrumar o fov a longas distancias
-- Colocar opção de limite de distancia do aimbot
-- Colocar opção de forcefield check
-- Aumentar o fps / Arrumar os memory leaks
-
-
-Notas:
-- Estou focando em funções de combate mas irei focar em funções universais quando terminar o que ja está planejado
-- Dei uma pausa de desenvolver o Universal, fiz o do conheça nao chorax no tedio e acredito que va demorar pra voltar a desenvolver ambos. Quanto ao de forsaken, bom, pode ser que demore mais ainda.
+Ainda não tenho acesso a um executor bom, então no maximo de auto tasks que vou conseguir fazer é o auto prayer e talvez auto portal
