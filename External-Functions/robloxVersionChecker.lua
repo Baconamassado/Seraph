@@ -58,7 +58,7 @@ local iu = srv == crv
 return {
     executor = en,
     executorVersion = ev,
-    supportedRobloxVersion = srv,
+    supportedRobloxVersion = srv, -- isso também é considerado a versão atual do player/client
     currentRobloxVersion = crv,
     updated = iu
 }
