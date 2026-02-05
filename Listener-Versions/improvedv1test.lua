@@ -1,5 +1,6 @@
 -- By x7bokab
 -- Remote Spy for Seraph
+-- Funcionar funcionava, mas parei de usar porque tinha alguns bugs e eu não sei arrumar LOL
 
 local SimpleRemoteSpy = {}
 
